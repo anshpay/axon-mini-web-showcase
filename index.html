@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AXON Mini | Vision Compute</title>
+    <meta name="description" content="AXON Mini edge AI board with cinematic scroll storytelling." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <p>AXON MINI</p>
+      <a href="#spec-grid">SPECIFICATIONS</a>
+    </header>
+
+    <section class="intro">
+      <p class="kicker">Qualcomm QCS6490-Based AI Vision Platform</p>
+      <h1>Built to see. Built to ship.</h1>
+      <p class="summary">
+        A compact edge compute board designed for production-grade vision systems. Scroll through the
+        architecture as the board descends from overview to subsystem detail.
+      </p>
+    </section>
+
+    <section class="scrolly" id="scrolly">
+      <div class="frame">
+        <canvas id="scene" aria-label="AXON Mini 3D board sequence"></canvas>
+
+        <div class="copy-stack">
+          <article class="copy active" data-stage="0">
+            <p class="copy-index">01</p>
+            <h2>Storage</h2>
+            <p>32GB eMMC 5.1 onboard, expandable UFS 3.1, and PCIe 3.0 x2 NVMe through B2B.</p>
+          </article>
+          <article class="copy" data-stage="1">
+            <p class="copy-index">02</p>
+            <h2>Memory + AI</h2>
+            <p>8GB/16GB LPDDR5-3200, Hexagon DSP, and 13 TOPS NPU for real-time edge inferencing.</p>
+          </article>
+          <article class="copy" data-stage="2">
+            <p class="copy-index">03</p>
+            <h2>Video Engine</h2>
+            <p>Adreno VPU 633 supports 4K60 decode, 4K30 encode, and HDR10/HDR10+ playback.</p>
+          </article>
+          <article class="copy" data-stage="3">
+            <p class="copy-index">04</p>
+            <h2>CPU + GPU</h2>
+            <p>Kryo 670 octa-core up to 2.7 GHz with Adreno 643L for Vulkan and OpenCL workloads.</p>
+          </article>
+          <article class="copy" data-stage="4">
+            <p class="copy-index">05</p>
+            <h2>Wireless</h2>
+            <p>AMPAK AP6276S, tri-band WiFi 2.4/5/6 GHz 2T2R, Bluetooth 5.3, virtual antenna + U.FL.</p>
+          </article>
+          <article class="copy" data-stage="5">
+            <p class="copy-index">06</p>
+            <h2>Expansion</h2>
+            <p>USB-C DP 1.4, HDMI 2.0 4K60, MIPI CSI lanes, GPIO, PCIe modules, PoE+, UART/JTAG.</p>
+          </article>
+        </div>
+
+        <div class="progress-ui" aria-hidden="true">
+          <div class="progress-track"><span id="progressFill"></span></div>
+          <p id="progressLabel">Storage</p>
+        </div>
+      </div>
+      <div class="space" aria-hidden="true"></div>
+    </section>
+
+    <section class="spec-grid" id="spec-grid">
+      <article>
+        <h3>Compute</h3>
+        <p>Qualcomm Kryo 670 octa-core CPU, Adreno 643L GPU, Hexagon DSP, 13 TOPS NPU.</p>
+      </article>
+      <article>
+        <h3>Video</h3>
+        <p>Decode up to 4K60 and encode up to 4K30 (H.264/H.265), with HDR10/HDR10+ playback.</p>
+      </article>
+      <article>
+        <h3>Memory + Storage</h3>
+        <p>8GB/16GB LPDDR5-3200, 32GB eMMC 5.1, UFS 3.1, and PCIe 3.0 x2 NVMe expansion.</p>
+      </article>
+      <article>
+        <h3>I/O + Interfaces</h3>
+        <p>USB-C, HDMI 2.0, MIPI-CSI connectors, GPIO headers, PCIe lanes, audio I/O, debug ports.</p>
+      </article>
+    </section>
+
+    <footer>
+      <p>AXON Mini</p>
+      <p>Edge vision compute platform</p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
