@@ -28,8 +28,11 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site
-          cp index.html styles.css main.js _site/
-          cp -r assets _site/assets
+          rsync -av --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='_site/' \
+            ./ _site/
           touch _site/.nojekyll
 
       - name: Upload artifact

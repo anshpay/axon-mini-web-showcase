@@ -1,0 +1,246 @@
+:root {
+  --bg: #f5f6f8;
+  --line: #d8dde7;
+  --text: #111319;
+  --muted: #616874;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 80% 12%, #fff 0%, #f1f4f8 56%, #eceff5 100%);
+  color: var(--text);
+  font-family: "Outfit", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.2rem;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, #ffffff 86%, transparent);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+  z-index: 30;
+}
+
+header a,
+header p,
+header button {
+  margin: 0;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-weight: 600;
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header button {
+  border: 1px solid #bcc6d5;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+}
+
+.hero {
+  padding: 7rem clamp(1rem, 6vw, 5rem) 2rem;
+  max-width: 80rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #6f7783;
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+  font-size: 0.74rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0.7rem;
+  font-size: clamp(2.1rem, 7vw, 6.1rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  max-width: 11.5ch;
+}
+
+.lead {
+  margin-top: 1rem;
+  color: var(--muted);
+  max-width: 50ch;
+  line-height: 1.7;
+}
+
+.story {
+  height: 520vh;
+  position: relative;
+}
+
+.space {
+  height: 100%;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.device-wrap {
+  position: absolute;
+  right: clamp(1rem, 7vw, 7rem);
+  top: 19%;
+  width: min(50vw, 720px);
+  height: 56vh;
+}
+
+.device {
+  position: absolute;
+  width: 100%;
+  transform: translate3d(0, 0, 0) rotateX(56deg) rotateZ(-26deg);
+  transform-origin: 50% 40%;
+  filter: drop-shadow(0 30px 48px rgba(4, 10, 20, 0.2));
+}
+
+.modules {
+  position: absolute;
+  width: 74%;
+  right: -4%;
+  top: 4%;
+  opacity: 0;
+  transform: translateX(40px) translateY(-10px);
+  transition: opacity 300ms ease;
+}
+
+.halo {
+  position: absolute;
+  width: 58%;
+  height: 58%;
+  background: radial-gradient(circle, rgba(140, 156, 185, 0.28), rgba(255, 255, 255, 0));
+  right: 19%;
+  top: 26%;
+  filter: blur(25px);
+}
+
+.panel {
+  position: absolute;
+  left: clamp(1rem, 6vw, 5rem);
+  bottom: clamp(1rem, 6vh, 3rem);
+  width: min(30rem, 92vw);
+  min-height: 12rem;
+}
+
+.copy {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #d7dde9;
+  border-radius: 1.3rem;
+  padding: 1rem 1.2rem;
+  background: color-mix(in srgb, #fff 84%, transparent);
+  box-shadow: 0 18px 40px rgba(18, 33, 61, 0.08);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 340ms ease, transform 340ms ease;
+}
+
+.copy.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.copy p {
+  margin: 0;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #647081;
+  font-size: 0.72rem;
+}
+
+.copy h2 {
+  margin-top: 0.4rem;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(1.5rem, 2.7vw, 2.2rem);
+  line-height: 1.05;
+}
+
+.copy span {
+  margin-top: 0.65rem;
+  display: block;
+  color: #505865;
+  line-height: 1.6;
+}
+
+.rail {
+  position: absolute;
+  top: 50%;
+  right: clamp(1rem, 4vw, 2.4rem);
+  width: min(13rem, 32vw);
+  height: 2px;
+  background: #d2d8e3;
+}
+
+.rail i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #151820, #6e7787);
+}
+
+.endcap {
+  padding: 4rem clamp(1rem, 6vw, 5rem) 5rem;
+}
+
+.endcap h3 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(1.7rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  max-width: 24ch;
+}
+
+@media (max-width: 960px) {
+  .story {
+    height: 560vh;
+  }
+
+  .device-wrap {
+    width: min(88vw, 700px);
+    right: -15%;
+    top: 25%;
+  }
+
+  .rail {
+    top: auto;
+    bottom: 15.5rem;
+    width: min(15rem, 82vw);
+    right: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel {
+    left: 0.8rem;
+    right: 0.8rem;
+    width: auto;
+    min-height: 13rem;
+  }
+}

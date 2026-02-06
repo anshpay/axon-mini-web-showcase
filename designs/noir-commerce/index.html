@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noir Commerce | AXON Mini</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Newsreader:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="menu card">
+        <a href="../../" class="back">Design Lab</a>
+        <h1>AXON Mini</h1>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">Story</a>
+          <a href="#">Specs</a>
+        </nav>
+        <p class="meta">Edge AI board for vision-native products.</p>
+      </section>
+
+      <section class="product card">
+        <p class="eyebrow">Noir Commerce</p>
+        <img src="../../assets/board-top-clean.png" alt="AXON board" id="productImage" />
+        <h2>AXON Mini Base Kit</h2>
+        <p class="price">$299</p>
+        <div class="actions">
+          <button id="minus">-</button>
+          <span id="qty">1</span>
+          <button id="plus">+</button>
+        </div>
+        <button class="add" id="add">Add to cart</button>
+      </section>
+
+      <section class="cart card">
+        <h3>Cart</h3>
+        <div class="row"><span>AXON Mini Kit</span><span id="lineQty">1x</span></div>
+        <div class="row"><span>Unit</span><span>$299</span></div>
+        <div class="row total"><span>Total</span><span id="total">$299</span></div>
+        <button>Checkout</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
